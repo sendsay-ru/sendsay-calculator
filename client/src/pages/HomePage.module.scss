@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  gap: 56px;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 240px;
+  margin-top: 72px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}

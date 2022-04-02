@@ -1,0 +1,33 @@
+@import '../../../assets/color.scss';
+
+.toggler {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  width: 243px;
+  height: 38px;
+  padding: 1px;
+  background-color: $secondary;
+  border-radius: 6px;
+}
+
+.btn {
+  color: $text-secondary !important;
+  text-transform: capitalize !important;
+  width: 133px;
+  padding: 8px 12px !important;
+  border: 1px solid $secondary !important;
+}
+
+.active {
+  border-radius: 5px;
+  border-color: $greyLight !important;
+  background-color: $white !important;
+}
+
+.activeIcon {
+  color: $primary;
+}

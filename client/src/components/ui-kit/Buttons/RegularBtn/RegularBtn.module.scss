@@ -1,0 +1,16 @@
+@import '../../../../assets/color.scss';
+
+.btn {
+  border: 1px solid $greyLight !important;
+  border-radius: 6px !important;
+  min-width: 52px !important;
+  color: $text-main !important;
+  width: 72px;
+  height: 48px;
+  flex-shrink: 1;
+}
+
+.btn:hover {
+  border: 2px solid $primary !important;
+}
+

@@ -1,0 +1,10 @@
+@import '../../../../assets/color.scss';
+
+.btn {
+  border-radius: 6px !important;
+  min-width: 52px !important;
+  color: $text-main !important;
+  width: 100%;
+  height: 64px;
+  flex-shrink: 1;
+}

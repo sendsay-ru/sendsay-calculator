@@ -1,0 +1,47 @@
+@import '../../../assets/zIndex.scss';
+
+
+.container {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $dragContainer;
+    background-color: transparent;
+    cursor: grab;
+  }
+}
+
+.container.dragging {
+  &::after {
+    content: '';
+    cursor: move;
+  }
+}
+
+.container.dragDisabled {
+  &::after {
+    cursor: no-drop;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  min-height: 60px;
+  max-height: 225px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px;
+}
+
+.locked :nth-child(1) {
+  opacity: .5;
+}
