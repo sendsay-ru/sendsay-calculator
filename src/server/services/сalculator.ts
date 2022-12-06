@@ -75,7 +75,7 @@ class DivideStrategy extends CalcTemplate {
 }
 
 class Context {
-  strategy: CalcStrategy
+  strategy!: CalcStrategy
 
   setStrategy(strategy: CalcStrategy) {
     this.strategy = strategy
@@ -92,16 +92,16 @@ class Calculator {
   calculate(a: string, b: string, action: Operations) {
     switch(action) {
       case Operations.Addition:
-        this.context.setStrategy(new AddStrategy)
+        this.context.setStrategy(new AddStrategy())
         break
       case Operations.Substraction:
-        this.context.setStrategy(new SubstructStrategy)
+        this.context.setStrategy(new SubstructStrategy())
         break
       case Operations.Multiplication:
-        this.context.setStrategy(new MultiplyStrategy)
+        this.context.setStrategy(new MultiplyStrategy())
         break
       case Operations.Division:
-        this.context.setStrategy(new DivideStrategy)
+        this.context.setStrategy(new DivideStrategy())
         break
     }
 

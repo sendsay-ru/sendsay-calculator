@@ -1,15 +1,26 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
-    "target": "ES2020",
-    "module": "commonjs",
-    "noEmitOnError": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "typeRoots": [ "../node_modules/@types" ]
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "include": ["./server/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "react-app-env.d.ts"
+  ]
 }

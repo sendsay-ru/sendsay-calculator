@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { calculate } from '../../api/calculator'
-import { CalcReqBody, CalcErrorResponse, CalcSuccessfulResponse } from '../../../../common/types'
+import { CalcReqBody, CalcErrorResponse, CalcSuccessfulResponse } from '../../common/types'
 import { initialState } from './initialState'
 import { FetchStatus, Operations } from '../../ts/enums'
 import type { RootState } from '../store'
@@ -30,13 +30,13 @@ const calculatorSlice = createSlice({
   name: 'calculator',
   initialState,
   reducers: {
-    toggleConstructorMode(state, { payload }) {
+    toggleConstructorMode(state = initialState, { payload }) {
       return {
         ...initialState,
         mode: payload
       }
     },
-    setOperation(state, { payload }) {
+    setOperation(state = initialState, { payload }) {
       if (payload === Operations.Substraction) {
         if (state.input.number1 === '') {
           return {
@@ -63,7 +63,7 @@ const calculatorSlice = createSlice({
         state.input.action = payload
       }
     },
-    setNumber(state, { payload }) {
+    setNumber(state = initialState, { payload }) {
       state.result = null
       state.errorMessage = null
 
@@ -84,15 +84,15 @@ const calculatorSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(makeCalculation.pending, (state) => {
+      .addCase(makeCalculation.pending, (state = initialState) => {
         state.calculationStatus = FetchStatus.Pending
       })
-      .addCase(makeCalculation.fulfilled, (state, action) => {
+      .addCase(makeCalculation.fulfilled, (state = initialState, action) => {
         state.calculationStatus = FetchStatus.Idle
         state.result = (action.payload as CalcSuccessfulResponse).result
         state.input = initialState.input
       })
-      .addCase(makeCalculation.rejected, (state, { payload }) => {
+      .addCase(makeCalculation.rejected, (state = initialState, { payload }) => {
         state.calculationStatus = FetchStatus.Rejected
         state.errorMessage = (payload as CalcErrorResponse).message ?? DEFAULT_ERROR_MESSAGE
         state.input = initialState.input
@@ -104,10 +104,10 @@ export default calculatorSlice.reducer
 
 export const { setOperation, setNumber, toggleConstructorMode } = calculatorSlice.actions
 
-export const getResult = (state: RootState) => state.calculator.result
-export const getCurrentMode = (state: RootState) => state.calculator.mode
-export const getCalculatorInput = (state: RootState) => state.calculator.input
+export const getResult = (state: RootState) => state.calculator!.result
+export const getCurrentMode = (state: RootState) => state.calculator!.mode
+export const getCalculatorInput = (state: RootState) => state.calculator!.input
 export const getCalculationStatus = (state: RootState) =>
-  state.calculator.calculationStatus
+  state.calculator!.calculationStatus
 export const getErrorMessage = (state: RootState) =>
-  state.calculator.errorMessage
+  state.calculator!.errorMessage

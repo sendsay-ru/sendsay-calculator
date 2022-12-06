@@ -8,10 +8,9 @@ import type { DraggableItem } from '../../../ts/types';
 import { useSelector } from 'react-redux';
 import { getCurrentMode } from '../../../store/calculator/calculatorSlice';
 import { ConstructorMode } from '../../../ts/enums';
-import { DISABLED_BLOCKS } from '../../../constants/calculatorConstants'
+import { DISABLED_BLOCKS, DROPPABLE_CONTAINER_ID } from '../../../constants/calculatorConstants'
 import DragItem from '../../DndHelpers/DragItem/DragItem';
 import { useDroppable } from '@dnd-kit/core';
-import { DROPPABLE_CONTAINER_ID } from '../../../constants/calculatorConstants'
 import RemoveContainer from '../../DndHelpers/RemoveItemContainer/RemoveItemContainer';
 
 

@@ -1,4 +1,4 @@
-import { Operations } from "../../../../common/enums"
+import { Operations } from "../../common/enums"
 import { FetchStatus, ConstructorMode } from "../../ts/enums"
 
 
@@ -12,7 +12,7 @@ export interface ValidCalcInput extends CalculatorInput {
   action: Operations,
 }
 
-interface ReduxCalcState {
+export interface ReduxCalcState {
   input: CalculatorInput
   mode: ConstructorMode,
   result: string | null,
