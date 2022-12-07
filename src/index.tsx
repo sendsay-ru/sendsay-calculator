@@ -1,11 +1,12 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux'
-import store from './store/store'
+
+import store from './store/store';
 import './assets/index.scss';
-import App from './components/App/App'
+import App from './components/App/App';
 
 const theme = createTheme({
   palette: {

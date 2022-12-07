@@ -1,6 +1,6 @@
 export interface RestApiError {
-  statusCode: number,
-  message: string,
+  statusCode: number;
+  message: string;
 }
 
 export interface CalcStrategy {

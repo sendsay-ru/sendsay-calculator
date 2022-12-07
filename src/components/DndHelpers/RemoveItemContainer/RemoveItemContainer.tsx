@@ -1,17 +1,16 @@
-import React from 'react'
-
+import React from 'react';
 
 interface Props {
-  handleRemove(): void,
-  children: React.ReactNode
+  handleRemove(): void;
+  children: React.ReactNode;
 }
 
 const RemoveItemContainer = ({ handleRemove, children }: Props) => {
   return (
     <div onDoubleClick={handleRemove} style={{ touchAction: 'manipulation' }}>
-      { children }
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default RemoveItemContainer
+export default RemoveItemContainer;

@@ -1,5 +1,5 @@
-import { CLONE_SUFFIX } from '../constants/calculatorConstants'
+import { CLONE_SUFFIX } from '../constants/calculatorConstants';
 
 export default function removeIdSuffix(id: string): string {
-  return id.replace(CLONE_SUFFIX, '')
+  return id.replace(CLONE_SUFFIX, '');
 }

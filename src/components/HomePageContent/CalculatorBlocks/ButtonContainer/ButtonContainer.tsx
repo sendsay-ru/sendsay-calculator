@@ -1,12 +1,13 @@
-import React from 'react'
-import RegularBtn from '../../../ui-kit/Buttons/RegularBtn/RegularBtn'
-import { useDispatch } from 'react-redux'
-import { setNumber } from '../../../../store/calculator/calculatorSlice'
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
-import styles from './ButtonContainer.module.scss'
+import { setNumber } from '../../../../store/calculator/calculatorSlice';
+import RegularBtn from '../../../ui-kit/Buttons/RegularBtn/RegularBtn';
+
+import styles from './ButtonContainer.module.scss';
 
 const ButtonContainer = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const children = [
     { text: '7' },
@@ -20,21 +21,21 @@ const ButtonContainer = () => {
     { text: '3' },
     { text: '0' },
     { text: ',' },
-  ]
+  ];
 
   return (
-    <div className={styles.container} >
-      {children.map(btn => {
-        const onClick = () => dispatch(setNumber(btn.text))
+    <div className={styles.container}>
+      {children.map((btn) => {
+        const onClick = () => dispatch(setNumber(btn.text));
 
         return (
           <RegularBtn key={btn.text} onClick={onClick}>
             {btn.text}
           </RegularBtn>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default ButtonContainer
+export default ButtonContainer;

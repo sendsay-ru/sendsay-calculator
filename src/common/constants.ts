@@ -1,1 +1,1 @@
-export const DEFAULT_ROUTE = './netlify/functions/server'
+export const DEFAULT_ROUTE = './netlify/functions/server';

@@ -1,5 +1,5 @@
-import removeIdSuffix from "./removeIdSuffix";
+import removeIdSuffix from './removeIdSuffix';
 
 export default function checkById(cloneId: string, originId: string) {
-  return removeIdSuffix(cloneId) === originId
+  return removeIdSuffix(cloneId) === originId;
 }

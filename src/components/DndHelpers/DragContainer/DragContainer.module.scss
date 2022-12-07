@@ -1,6 +1,5 @@
 @import '../../../assets/zIndex.scss';
 
-
 .container {
   position: relative;
 
@@ -43,5 +42,5 @@
 }
 
 .locked :nth-child(1) {
-  opacity: .5;
+  opacity: 0.5;
 }

@@ -1,1 +1,1 @@
-export { default } from './controllers/calculator.controller'
+export { default } from './controllers/calculator.controller';

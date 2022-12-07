@@ -1,9 +1,9 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const HEADERS = {
-  'Content-Type': 'application/json'
-}
+  'Content-Type': 'application/json',
+};
 
 export const http = axios.create({
-  headers: HEADERS
+  headers: HEADERS,
 });

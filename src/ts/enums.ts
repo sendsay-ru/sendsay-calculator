@@ -2,24 +2,24 @@ export const enum FetchStatus {
   Pending,
   Fulfilled,
   Rejected,
-  Idle
+  Idle,
 }
 
 export const enum ConstructorMode {
   Constructor,
-  Preview
+  Preview,
 }
 
 export const enum Operations {
   Addition = 1,
   Substraction,
   Multiplication,
-  Division
+  Division,
 }
 
 export const enum ElementId {
   Display = 'display',
   Operations = 'operations',
   Digits = 'digits',
-  Equals = 'equals'
+  Equals = 'equals',
 }

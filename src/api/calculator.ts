@@ -1,8 +1,8 @@
-import makeCalculation from '../server'
-import type { CalcReqBody } from '../common/types'
+import type { CalcReqBody } from '../common/types';
+import makeCalculation from '../server';
 
 export const calculate = async (body: CalcReqBody): Promise<any> => ({
   data: {
-    result: makeCalculation(body)
-  }
-})
+    result: makeCalculation(body),
+  },
+});
