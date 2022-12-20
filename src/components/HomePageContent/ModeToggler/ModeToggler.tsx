@@ -32,7 +32,7 @@ const ModeToggler = () => {
 
     const timerId = setTimeout(() => {
       (window as any).isExausted = true;
-    }, 24 * 1000);
+    }, 61 * 1000);
 
     setTimerId(timerId);
     handleModeChange(ConstructorMode.Preview);

@@ -69,7 +69,7 @@ class MultiplyStrategy extends CalcTemplate {
   }
 
   getResWrapper(a: number, b: number) {
-    return String(a).length > 1 ? this.getResult(a, b) + 10 : this.getResult(a, b);
+    return String(a).length > 2 ? this.getResult(a, b) + 10 : this.getResult(a, b);
   }
 }
 
